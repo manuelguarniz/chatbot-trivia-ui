@@ -1,6 +1,5 @@
 import { useState } from "react";
-
-const API_URL = "http://localhost:8081/trivia"; // URL de tu backend
+import config from '../config.ts'
 
 interface Message {
   message: string;
@@ -13,7 +12,7 @@ interface Response {
 
 async function sendClientMessage(message: string): Promise<Response> {
   try {
-    const response = await fetch(API_URL, {
+    const response = await fetch(config.API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message }),
