@@ -1,5 +1,5 @@
 const config = {
-  API_URL: 'http://localhost:8081/trivia'
+  API_URL: 'https://chatbot-trivia-api-default-664539722344.us-central1.run.app/trivia'
 }
 
 export default config;
